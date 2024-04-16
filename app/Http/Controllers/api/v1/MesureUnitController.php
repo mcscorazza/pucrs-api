@@ -1,49 +1,37 @@
 <?php
 
-namespace App\Http\Controllers\v1;
+namespace App\Http\Controllers\Api\V1;
 
-
-use App\Models\MesureUnit;
-use App\Http\Requests\StoreMesureUnitRequest;
-use App\Http\Requests\UpdateMesureUnitRequest;
+use App\Models\V1\MesureUnit;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\V1\StoreMesureUnitRequest;
+use App\Http\Requests\V1\UpdateMesureUnitRequest;
+use App\Http\Resources\V1\MesureUnitResource;
+use App\Http\Resources\V1\MesureUnitCollection;
 
 class MesureUnitController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return new MesureUnitCollection(MesureUnit::all());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreMesureUnitRequest $request)
     {
-        //
+        MesureUnit::create($request->all());
+        return (new MesureUnitResource($request->all()))->response()->setStatusCode(201);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(MesureUnit $mesureUnit)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateMesureUnitRequest $request, MesureUnit $mesureUnit)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(MesureUnit $mesureUnit)
     {
         //

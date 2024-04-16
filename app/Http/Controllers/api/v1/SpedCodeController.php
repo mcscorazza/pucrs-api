@@ -1,48 +1,36 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Models\SpedCode;
-use App\Http\Requests\StoreSpedCodeRequest;
-use App\Http\Requests\UpdateSpedCodeRequest;
+use App\Models\V1\SpedCode;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\V1\StoreSpedCodeRequest;
+use App\Http\Requests\V1\UpdateSpedCodeRequest;
+use App\Http\Resources\V1\SpedCodeResource;
+use App\Http\Resources\V1\SpedCodeCollection;
 
 class SpedCodeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return new SpedCodeCollection(SpedCode::all());
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreSpedCodeRequest $request)
     {
-        //
+        SpedCode::create($request->all());
+        return (new SpedCodeResource($request->all()))->response()->setStatusCode(201);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(SpedCode $spedCode)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateSpedCodeRequest $request, SpedCode $spedCode)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(SpedCode $spedCode)
     {
         //

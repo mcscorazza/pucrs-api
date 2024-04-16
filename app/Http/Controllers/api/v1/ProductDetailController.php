@@ -1,48 +1,34 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Models\ProductDetail;
-use App\Http\Requests\StoreProductDetailRequest;
-use App\Http\Requests\UpdateProductDetailRequest;
+use App\Models\V1\ProductDetail;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\V1\StoreProductDetailRequest;
+use App\Http\Requests\V1\UpdateProductDetailRequest;
 
 class ProductDetailController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return "PRODUCT DETAILS";
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreProductDetailRequest $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(ProductDetail $productDetail)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UpdateProductDetailRequest $request, ProductDetail $productDetail)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(ProductDetail $productDetail)
     {
         //
