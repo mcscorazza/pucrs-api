@@ -6,9 +6,13 @@ use App\Models\V1\User;
 use App\Models\V1\SpedCode;
 use App\Models\V1\MesureUnit;
 use App\Models\V1\ProductType;
+use App\Models\V1\ProductDetail;
+use App\Models\V1\Movement;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Product extends Model
 {
@@ -30,6 +34,14 @@ class Product extends Model
 
     public function user(): BelongsTo {
         return $this->belongsto(User::class);
+    }
+
+    public function detail(): HasOne {
+        return $this->hasOne(ProductDetail::class);
+    }
+
+    public function movement(): HasMany {
+        return $this->hasMany(Movement::class);
     }
 
 

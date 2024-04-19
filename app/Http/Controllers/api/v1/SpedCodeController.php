@@ -21,18 +21,20 @@ class SpedCodeController extends Controller
         return (new SpedCodeResource($request->all()))->response()->setStatusCode(201);
     }
 
-    public function show(SpedCode $spedCode)
+    public function show(SpedCode $sped)
     {
-        //
+        return new SpedCodeResource($sped);
     }
 
-    public function update(UpdateSpedCodeRequest $request, SpedCode $spedCode)
+    public function update(UpdateSpedCodeRequest $request, SpedCode $sped)
     {
-        //
+        $sped->update($request-all());
+        return (new SpedResource($sped))->response()->setStatusCode(200);
     }
 
-    public function destroy(SpedCode $spedCode)
+    public function destroy(SpedCode $sped)
     {
-        //
+        $sped->delete();
+        return response("Success Deleted!", 200);
     }
 }

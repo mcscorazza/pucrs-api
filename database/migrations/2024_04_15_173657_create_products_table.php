@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedBigInteger('product_type_id');
             $table->unsignedBigInteger('mesure_unit_id');
             $table->timestamps();
-            
+    
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('product_type_id')->references('id')->on('product_types');
             $table->foreign('mesure_unit_id')->references('id')->on('mesure_units');

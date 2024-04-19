@@ -2,22 +2,20 @@
 
 namespace App\Models\v1;
 
-use App\Models\V1\Product;
+use App\Models\V1\Movement;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class MesureUnit extends Model
+class MovementType extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['unit_short','unit_name'];
+    protected $fillable = ['move_type_code','move_type_name'];
 
-    
-
-    public function product(): HasMany
+    public function movement(): HasMany
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Movement::class);
     }
 
 }

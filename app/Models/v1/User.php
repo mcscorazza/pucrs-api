@@ -3,6 +3,7 @@
 namespace App\Models\V1;
 
 use App\Models\V1\Product;
+use App\Models\V1\Movement;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -17,21 +18,14 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $fillable = ['name','email','password'];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['password','remember_token'];
 
     /**
      * Get the attributes that should be cast.
@@ -40,14 +34,16 @@ class User extends Authenticatable
      */
     protected function casts(): array
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return ['email_verified_at' => 'datetime','password' => 'hashed'];
     }
 
     public function product(): HasMany
     {
-        return $this->hasOne(Product::class);
+        return $this->hasMany(Product::class);
+    }
+
+    public function movement(): HasMany
+    {
+        return $this->hasMany(Movement::class);
     }
 }

@@ -13,8 +13,12 @@ class SpedCodeResource extends JsonResource
      *
      * @return array<string, mixed>
      */
-    public function toArray(Request $request): array
+    public function toArray(Request $request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'code' => $this->sped_code,
+            'description' => $this->sped_description
+        ];
     }
 }
