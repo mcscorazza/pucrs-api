@@ -19,21 +19,23 @@ class MesureUnitController extends Controller
     public function store(StoreMesureUnitRequest $request)
     {
         MesureUnit::create($request->all());
-        return (new MesureUnitResource($request->all()))->response()->setStatusCode(201);
+        return (new MesureUnitResource($request))->response()->setStatusCode(201);
     }
 
-    public function show(MesureUnit $mesureUnit)
+    public function show(MesureUnit $unit)
     {
-        //
+        return new MesureUnitResource($unit);
     }
 
-    public function update(UpdateMesureUnitRequest $request, MesureUnit $mesureUnit)
+    public function update(UpdateMesureUnitRequest $request, MesureUnit $unit)
     {
-        //
+        $unit->update($request->all());
+        return (new MesureUnitResource($unit))->response()->setStatusCode(200);;
     }
 
-    public function destroy(MesureUnit $mesureUnit)
+    public function destroy(MesureUnit $unit)
     {
-        //
+        $unit->delete();
+        return response("Success Deleted!", 200);
     }
 }

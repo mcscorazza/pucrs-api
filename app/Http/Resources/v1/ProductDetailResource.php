@@ -2,11 +2,11 @@
 
 namespace App\Http\Resources\v1;
 
-use App\Http\Resources;
+use App\Models\V1\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProductTypeResource extends JsonResource
+class ProductDetailResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,8 +17,10 @@ class ProductTypeResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'code' => $this->type_code,
-            'name' => $this->type_name
+            'code' => Product::findOrFail($this->product_id)->code,
+            'name' => Product::findOrFail($this->product_id)->name,
+            'description' => $this->description,
+            'images' => $this->images_array
         ];
     }
 }

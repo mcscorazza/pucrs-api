@@ -12,8 +12,12 @@ class MesureUnitResource extends JsonResource
      *
      * @return array<string, mixed>
      */
-    public function toArray(Request $request): array
+    public function toArray(Request $request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'short' => $this->unit_short,
+            'name' => $this->unit_name
+        ];
     }
 }

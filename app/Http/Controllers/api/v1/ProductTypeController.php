@@ -22,18 +22,20 @@ class ProductTypeController extends Controller
         return (new ProductTypeResource($request->all()))->response()->setStatusCode(201);
     }
 
-    public function show(ProductType $productType)
+    public function show(ProductType $type)
     {
-        //
+        return new ProductTypeResource($type);
     }
 
-    public function update(UpdateProductTypeRequest $request, ProductType $productType)
+    public function update(UpdateProductTypeRequest $request, ProductType $type)
     {
-        //
+        $type->update($request->all());
+        return (new ProductTypeResource($type))->response()->setStatusCode(200);
     }
 
-    public function destroy(ProductType $productType)
+    public function destroy(ProductType $type)
     {
-        //
+        $type->delete();
+        return response("Success Deleted!", 200);
     }
 }

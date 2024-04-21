@@ -23,7 +23,7 @@ class ProductResource extends JsonResource
             'name'=> $this->name,
             'stock' => $this->stock,
             'value' => $this->value,
-            'user' => User::findOrFail($this->user_id)->email,
+            'user' => User::findOrFail($this->user_id)->name,
             'type' => ProductType::findOrFail($this->product_type_id)->type_name,
             'unit' => MesureUnit::findOrFail($this->mesure_unit_id)->unit_name
         ];

@@ -15,7 +15,7 @@ class SpedCode extends Model
 
     public function product(): HasMany
     {
-        return $this->hasOne(Product::class);
+        return $this->hasMany(Product::class);
     }
 
 }
