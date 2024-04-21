@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\api\v1;
 
-use App\Models\v1\ProductType;
 use App\Http\Controllers\Controller;
+
+use App\Models\v1\ProductType;
+
 use App\Http\Requests\v1\StoreProductTypeRequest;
 use App\Http\Requests\v1\UpdateProductTypeRequest;
 use App\Http\Resources\v1\ProductTypeResource;

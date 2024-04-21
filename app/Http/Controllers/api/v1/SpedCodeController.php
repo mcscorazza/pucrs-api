@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\api\v1;
 
-use App\Models\v1\SpedCode;
 use App\Http\Controllers\Controller;
+
+use App\Models\v1\SpedCode;
+
 use App\Http\Requests\v1\StoreSpedCodeRequest;
 use App\Http\Requests\v1\UpdateSpedCodeRequest;
 use App\Http\Resources\v1\SpedCodeResource;

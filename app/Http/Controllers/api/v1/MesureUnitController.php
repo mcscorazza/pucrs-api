@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\api\v1;
 
-use App\Models\v1\MesureUnit;
 use App\Http\Controllers\Controller;
+
+use App\Models\v1\MesureUnit;
+
 use App\Http\Requests\v1\StoreMesureUnitRequest;
 use App\Http\Requests\v1\UpdateMesureUnitRequest;
 use App\Http\Resources\v1\MesureUnitResource;

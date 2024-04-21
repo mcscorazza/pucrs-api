@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\api\v1;
 
-use App\Models\v1\Product;
 use App\Http\Controllers\Controller;
+
+use App\Models\v1\Product;
+
 use App\Http\Requests\v1\StoreProductRequest;
 use App\Http\Requests\v1\UpdateProductRequest;
 use App\Http\Resources\v1\ProductResource;

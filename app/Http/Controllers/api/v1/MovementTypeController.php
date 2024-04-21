@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\api\v1;
 
 use App\Http\Controllers\Controller;
+
 use App\Models\v1\MovementType;
+
 use App\Http\Requests\v1\StoreMovementTypeRequest;
 use App\Http\Requests\v1\UpdateMovementTypeRequest;
 use App\Http\Resources\v1\MovementTypeResource;
