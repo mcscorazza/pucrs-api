@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\api\v1;
 
-use App\Models\V1\ProductDetail;
+use App\Models\v1\ProductDetail;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\V1\StoreProductDetailRequest;
-use App\Http\Requests\V1\UpdateProductDetailRequest;
+use App\Http\Requests\v1\StoreProductDetailRequest;
+use App\Http\Requests\v1\UpdateProductDetailRequest;
 
 class ProductDetailController extends Controller
 {
