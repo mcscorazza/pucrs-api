@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\api\v1;
 
 use App\Http\Controllers\Controller; 
-use App\Models\V1\Supplier;
-use App\Http\Requests\V1\StoreSupplierRequest;
-use App\Http\Requests\V1\UpdateSupplierRequest;
-use App\Http\Resources\V1\SupplierResource;
-use App\Http\Resources\V1\SupplierCollection;
+use App\Models\v1\Supplier;
+use App\Http\Requests\v1\StoreSupplierRequest;
+use App\Http\Requests\v1\UpdateSupplierRequest;
+use App\Http\Resources\v1\SupplierResource;
+use App\Http\Resources\v1\SupplierCollection;
 
 class SupplierController extends Controller
 {

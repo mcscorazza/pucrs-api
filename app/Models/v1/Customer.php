@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\V1;
+namespace App\Models\v1;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\V1\Movement;
+use App\Models\v1\Movement;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Customer extends Model

@@ -2,11 +2,11 @@
 
 namespace App\Http\Resources\v1;
 
-use App\Models\V1\Product;
-use App\Models\V1\User;
-use App\Models\V1\Supplier;
-use App\Models\V1\Customer;
-use App\Models\V1\MovementType;
+use App\Models\v1\Product;
+use App\Models\v1\User;
+use App\Models\v1\Supplier;
+use App\Models\v1\Customer;
+use App\Models\v1\MovementType;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
