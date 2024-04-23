@@ -21,7 +21,7 @@ class UserController extends Controller
     public function store(StoreUserRequest $request)
     {
         User::create($request->all());
-        return (new UserResource($request->all()))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(User $user)

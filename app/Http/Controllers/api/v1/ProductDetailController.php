@@ -21,7 +21,7 @@ class ProductDetailController extends Controller
     public function store(StoreProductDetailRequest $request)
     {
         ProductDetail::create($request->all());
-        return (new ProductDetailResource($request))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(ProductDetail $detail)
@@ -32,7 +32,7 @@ class ProductDetailController extends Controller
     public function update(UpdateProductDetailRequest $request, ProductDetail $detail)
     {
         $detail->update($request->all());
-        return (new ProductDetailResource($detail))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(ProductDetail $detail)

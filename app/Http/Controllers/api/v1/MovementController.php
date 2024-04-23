@@ -21,7 +21,7 @@ class MovementController extends Controller
     public function store(StoreMovementRequest $request)
     {
         Movement::create($request->all());
-        return(new MovementResource($request))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(Movement $move)
@@ -32,7 +32,7 @@ class MovementController extends Controller
     public function update(UpdateMovementRequest $request, Movement $move)
     {
         $move->update($request->all());
-        return(new MovementResource($request))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(Movement $move)

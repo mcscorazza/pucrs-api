@@ -23,7 +23,7 @@ class MovementTypeController extends Controller
     public function store(StoreMovementTypeRequest $request)
     {
         MovementType::create($request->all());
-        return(new MovementTypeResource($request))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(MovementType $move_type)
@@ -34,7 +34,7 @@ class MovementTypeController extends Controller
     public function update(UpdateMovementTypeRequest $request, MovementType $move_type)
     {
         $move_type->update($request->all());
-        return(new MovementTypeResource($request))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(MovementType $move_type)

@@ -20,7 +20,7 @@ class SpedCodeController extends Controller
     public function store(StoreSpedCodeRequest $request)
     {
         SpedCode::create($request->all());
-        return (new SpedCodeResource($request->all()))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(SpedCode $sped)
@@ -31,7 +31,7 @@ class SpedCodeController extends Controller
     public function update(UpdateSpedCodeRequest $request, SpedCode $sped)
     {
         $sped->update($request-all());
-        return (new SpedResource($sped))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(SpedCode $sped)

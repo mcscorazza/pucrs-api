@@ -21,7 +21,7 @@ class ProductTypeController extends Controller
     public function store(StoreProductTypeRequest $request)
     {
         ProductType::create($request->all());
-        return (new ProductTypeResource($request->all()))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(ProductType $type)
@@ -32,7 +32,7 @@ class ProductTypeController extends Controller
     public function update(UpdateProductTypeRequest $request, ProductType $type)
     {
         $type->update($request->all());
-        return (new ProductTypeResource($type))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(ProductType $type)

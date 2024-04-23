@@ -22,7 +22,7 @@ class CustomerController extends Controller
     public function store(StoreCustomerRequest $request)
     {
         Customer::create($request->all());
-        return (new CustomerResource($request))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(Customer $customer)
@@ -33,7 +33,7 @@ class CustomerController extends Controller
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
         $customer->update($request->all());
-        return (new CustomerResource($customer))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(Customer $customer)

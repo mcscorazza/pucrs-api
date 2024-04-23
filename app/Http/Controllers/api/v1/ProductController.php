@@ -21,7 +21,7 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         Product::create($request->all());
-        return (new ProductResource($request))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(Product $product)
@@ -32,7 +32,7 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product)
     {
         $product->update($request->all());
-        return (new ProductResource($product))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(Product $product)

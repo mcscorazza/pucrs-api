@@ -21,7 +21,7 @@ class SupplierController extends Controller
     public function store(StoreSupplierRequest $request)
     {
         Supplier::create($request->all());
-        return (new SupplierResource($request))->response()->setStatusCode(201);
+        return response("Success Created!", 201);
     }
 
     public function show(Supplier $supplier)
@@ -32,7 +32,7 @@ class SupplierController extends Controller
     public function update(UpdateSupplierRequest $request, Supplier $supplier)
     {
         $supplier->update($request->all());
-        return (new SupplierResource($supplier))->response()->setStatusCode(200);
+        return response("Success Updated!", 200);
     }
 
     public function destroy(Supplier $supplier)
