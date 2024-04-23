@@ -13,7 +13,7 @@ class MesureUnitController extends Controller
 {
     public function index()
     {
-        return new MesureUnitCollection(MesureUnit::all());
+        return new MesureUnitCollection(MesureUnit::paginate(15));
     }
 
     public function store(StoreMesureUnitRequest $request)
