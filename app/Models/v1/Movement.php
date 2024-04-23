@@ -2,11 +2,11 @@
 
 namespace App\Models\v1;
 
-use App\Models\V1\User;
-use App\Models\V1\MovementType;
-use App\Models\V1\Supplier;
-use App\Models\V1\Customer;
-use App\Models\V1\Product;
+use App\Models\v1\User;
+use App\Models\v1\MovementType;
+use App\Models\v1\Supplier;
+use App\Models\v1\Customer;
+use App\Models\v1\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

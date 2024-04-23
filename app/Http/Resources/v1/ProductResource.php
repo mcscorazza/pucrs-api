@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources\v1;
 
-use App\Models\V1\ProductType;
-use App\Models\V1\User;
-use App\Models\V1\MesureUnit;
+use App\Models\v1\ProductType;
+use App\Models\v1\User;
+use App\Models\v1\MesureUnit;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 

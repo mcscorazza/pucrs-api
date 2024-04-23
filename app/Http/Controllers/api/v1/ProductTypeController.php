@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\api\v1;
 
-use App\Models\V1\ProductType;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\V1\StoreProductTypeRequest;
-use App\Http\Requests\V1\UpdateProductTypeRequest;
-use App\Http\Resources\V1\ProductTypeResource;
-use App\Http\Resources\V1\ProductTypeCollection;
+
+use App\Models\v1\ProductType;
+
+use App\Http\Requests\v1\StoreProductTypeRequest;
+use App\Http\Requests\v1\UpdateProductTypeRequest;
+use App\Http\Resources\v1\ProductTypeResource;
+use App\Http\Resources\v1\ProductTypeCollection;
 
 class ProductTypeController extends Controller
 {

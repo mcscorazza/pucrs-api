@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Models\V1;
+namespace App\Models\v1;
 
-use App\Models\V1\User;
-use App\Models\V1\SpedCode;
-use App\Models\V1\MesureUnit;
-use App\Models\V1\ProductType;
-use App\Models\V1\ProductDetail;
-use App\Models\V1\Movement;
+use App\Models\v1\User;
+use App\Models\v1\SpedCode;
+use App\Models\v1\MesureUnit;
+use App\Models\v1\ProductType;
+use App\Models\v1\ProductDetail;
+use App\Models\v1\Movement;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

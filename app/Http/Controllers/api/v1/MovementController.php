@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\api\v1;
 
 use App\Http\Controllers\Controller;
+
 use App\Models\v1\Movement;
+
 use App\Http\Requests\V1\StoreMovementRequest;
 use App\Http\Requests\V1\UpdateMovementRequest;
 use App\Http\Resources\V1\MovementResource;

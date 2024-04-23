@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\api\v1;
 
-use App\Models\V1\SpedCode;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\V1\StoreSpedCodeRequest;
-use App\Http\Requests\V1\UpdateSpedCodeRequest;
-use App\Http\Resources\V1\SpedCodeResource;
-use App\Http\Resources\V1\SpedCodeCollection;
+
+use App\Models\v1\SpedCode;
+
+use App\Http\Requests\v1\StoreSpedCodeRequest;
+use App\Http\Requests\v1\UpdateSpedCodeRequest;
+use App\Http\Resources\v1\SpedCodeResource;
+use App\Http\Resources\v1\SpedCodeCollection;
 
 class SpedCodeController extends Controller
 {

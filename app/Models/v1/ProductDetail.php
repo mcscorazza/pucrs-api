@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models\V1;
+namespace App\Models\v1;
 
-use App\Models\V1\Product;
+use App\Models\v1\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;

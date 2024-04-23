@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\api\v1;
 
-use App\Models\V1\MesureUnit;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\V1\StoreMesureUnitRequest;
-use App\Http\Requests\V1\UpdateMesureUnitRequest;
-use App\Http\Resources\V1\MesureUnitResource;
-use App\Http\Resources\V1\MesureUnitCollection;
+
+use App\Models\v1\MesureUnit;
+
+use App\Http\Requests\v1\StoreMesureUnitRequest;
+use App\Http\Requests\v1\UpdateMesureUnitRequest;
+use App\Http\Resources\v1\MesureUnitResource;
+use App\Http\Resources\v1\MesureUnitCollection;
 
 class MesureUnitController extends Controller
 {

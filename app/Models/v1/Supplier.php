@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\V1;
+namespace App\Models\v1;
 
 use App\Models\V1\Movement;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

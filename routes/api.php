@@ -3,16 +3,16 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Api\V1\UserController;
-use App\Http\Controllers\Api\V1\MesureUnitController;
-use App\Http\Controllers\Api\V1\ProductController;
-use App\Http\Controllers\Api\V1\ProductDetailController;
-use App\Http\Controllers\Api\V1\ProductTypeController;
-use App\Http\Controllers\Api\V1\SpedCodeController;
-use App\Http\Controllers\Api\V1\SupplierController;
-use App\Http\Controllers\Api\V1\CustomerController;
-use App\Http\Controllers\Api\V1\MovementTypeController;
-use App\Http\Controllers\Api\V1\MovementController;
+use App\Http\Controllers\Api\v1\UserController;
+use App\Http\Controllers\Api\v1\MesureUnitController;
+use App\Http\Controllers\Api\v1\ProductController;
+use App\Http\Controllers\Api\v1\ProductDetailController;
+use App\Http\Controllers\Api\v1\ProductTypeController;
+use App\Http\Controllers\Api\v1\SpedCodeController;
+use App\Http\Controllers\Api\v1\SupplierController;
+use App\Http\Controllers\Api\v1\CustomerController;
+use App\Http\Controllers\Api\v1\MovementTypeController;
+use App\Http\Controllers\Api\v1\MovementController;
 
 Route::prefix('v1')->group(function() {
     Route::apiResource('/users',    UserController::class);

@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api\V1;
+namespace App\Http\Controllers\api\v1;
 
-use App\Models\V1\ProductDetail;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\V1\StoreProductDetailRequest;
-use App\Http\Requests\V1\UpdateProductDetailRequest;
-use App\Http\Resources\V1\ProductDetailResource;
-use App\Http\Resources\V1\ProductDetailCollection;
+
+use App\Models\v1\ProductDetail;
+
+use App\Http\Requests\v1\StoreProductDetailRequest;
+use App\Http\Requests\v1\UpdateProductDetailRequest;
+use App\Http\Resources\v1\ProductDetailResource;
+use App\Http\Resources\v1\ProductDetailCollection;
 
 class ProductDetailController extends Controller
 {
