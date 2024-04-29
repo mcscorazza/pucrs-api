@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\v1;
+namespace App\Models;
 
 use App\Models\v1\Product;
 use App\Models\v1\Movement;

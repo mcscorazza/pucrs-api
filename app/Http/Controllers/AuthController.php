@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\v1\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -23,7 +23,11 @@ class AuthController extends Controller
             'password' => bcrypt($validatedData['password']),
         ]);
         $token = $user->createToken('auth_token')->plainTextToken;
-        return response()->json(['token' => $token], 201);
+        return response()->json([
+            'token' => $token, 
+            'name' => $user->name,
+            'email' => $user->email
+        ], 201);
     }
 
     public function login(Request $request)
@@ -40,7 +44,11 @@ class AuthController extends Controller
         }
         $user = $request->user();
         $token = $user->createToken('auth_token')->plainTextToken;
-        return response()->json(['token' => $token], 200);
+        return response()->json([
+            'token' => $token, 
+            'name' => $user->name,
+            'email' => $user->email
+        ], 200);
     }
 
     public function logout(Request $request)
