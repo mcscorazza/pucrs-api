@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 
-Route::prefix('v1')->group(function() {
+Route::middleware('auth:sanctum')->prefix('v1')->group(function() {
     Route::apiResource('/units',    MesureUnitController::class);
     Route::apiResource('/products', ProductController::class);
     Route::apiResource('/details',  ProductDetailController::class);
